@@ -1,30 +1,13 @@
 <div class="social">
-	<h4>
-    {% if site.github %}
-	  <a href="http://github.com/{{ site.github }}"><i class="fa fa-github"></i></a>
-    {% endif %}
-    {% if site.email %}
-	  <a href="mailto:{{ site.email}}"><i class="fa fa-envelope"></i></a>
-    {% endif %}
-        {% if site.googlescholar %}
-        <a href="https://scholar.google.com/citations?user={{ site.googlescholar }}">
-            <i class="ai ai-google-scholar"></i>
-        </a>
-        {% endif %}
+  <span class="contacticon center">
+    <a href="mailto:{{ site.email }}"><i class="fa fa-envelope-square"></i></a>
+    <a href="https://scholar.google.com/citations?authorid={{ site.scholar_authorid }}" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar-square"></i></a>
+    <a href="https://github.com/{{ site.github_username }}" target="_blank" title="GitHub"><i class="fa fa-github-square"></i></a>
+    <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" title="LinkedIn"><i class="fa fa-linkedin-square"></i></a>
+    <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" title="Twitter"><i class="fa fa-twitter-square"></i></a>
+  </span>
 
-    {% if site.twitter %}
-	  <a href="http://twitter.com/{{ site.twitter }}"><i class="fa fa-twitter"></i></a>
-    {% endif %}
-    {% if site.linkedin %}
-	  <a href="http://linkedin.com/in/{{ site.linkedin }}"><i class="fa fa-linkedin"></i></a>
-    {% endif %}
-    {% if site.stackoverflow %}
-	  <a href="http://stackoverflow.com/{{ site.stackoverflow }}"><i class="fa fa-stack-overflow"></i></a>
-    {% endif %}
-        {% if site.researchgate %}
-            <a href="https://www.researchgate.net/profile/{{ site.researchgate }}">
-                <i class="ai ai-researchgate"></i>
-            </a>
-        {% endif %}
-	</h4>
+  <div class="col three caption">
+    {{ site.contact_note }}
+  </div>
 </div>
